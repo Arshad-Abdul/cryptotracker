@@ -34,7 +34,7 @@ function CoinDetailsPage() {
       return <div>Error: {error.message}</div>;
     }
     if (isLoading) {
-      return <div className="text-2xl text-black">Loading...</div>;
+      return <div className="text-2xl text-black">Downloadin Coin Data...</div>;
     }
     if (!coin) {
       return <div className="text-2xl text-black">No data found</div>;

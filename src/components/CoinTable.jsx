@@ -29,6 +29,9 @@ function CoinTable() {
   if (isError) {
     return <div>Error: {error.message}</div>;
   }
+  if (isLoading) {
+    return <div className="text-2xl text-black">Loading...</div>;
+  }
 
   return (
     
@@ -55,7 +58,7 @@ function CoinTable() {
                <div  onClick={()=>handleCoinRedirect(coin.id)}  key={coin.id} className="w-full bg-transparent text-white flex py-4 px-2 font-semibold items-center justify-between cursor-pointer">
                     <div className="flex items-center gap-3 basis-[35%]">
                       <div className="w-[5rem] h-[5rem]">
-                        <img src={coin.image} alt=""  className="w-full h-full"/>
+                        <img src={coin.image} alt=""  className="w-full h-full" loading="lazy"/>
                         
                       </div>
 
