@@ -5,6 +5,7 @@ import { fetchCoinDetails } from "../services/fetchCoinDetails";
 import { useEffect } from "react";
 import parse from "html-react-parser";
 import currencyStore from "../zstate/store";
+import CoinInfoContainer from "../components/CoinInfo/CoinInfoContainer";
 
 
 
@@ -92,8 +93,8 @@ function CoinDetailsPage() {
 
       </div>
 
-      <div className="md:w-2/3 w-full p-6">
-        Coin Information
+      <div className="w-full">
+        <CoinInfoContainer coinid={coinid}/>
 
       </div>
 
