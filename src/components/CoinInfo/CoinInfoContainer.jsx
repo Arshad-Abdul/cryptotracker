@@ -5,7 +5,7 @@ import Alert from "../Alert/Alert";
 
 function CoinInfoContainer({coinid}){
     
-    const[historicData, isError, isLoading, currency, days, setDays, setCoinInterval] =  useFetchCoinHistory(coinid)
+    const{historicData, isError, isLoading, currency, days, setDays, setCoinInterval} =  useFetchCoinHistory(coinid)
 
     if(isLoading){
         return <div>Page is Loading</div>

@@ -24,7 +24,7 @@ function useFetchCoinHistory(coinid) {
         
     }
     );
-    return [historicData, isError, isLoading, currency, days, setDays, setCoinInterval];
+    return {historicData, isError, isLoading, currency, days, setDays, setCoinInterval};
 }
 
 export default useFetchCoinHistory;
